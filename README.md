@@ -1,4 +1,4 @@
-# CarbonFixationModel1D
+# CarbonFixationModel
 Title: Mapping Carbon Fixation to Two Effective Parameters: a Framework towards data-informed Species and Model Comparison 
 
 Authors: A. Stillits, T.E. Knudsen, A. Trusina
