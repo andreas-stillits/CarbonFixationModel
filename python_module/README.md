@@ -10,7 +10,7 @@
 
 - example_script.ipynb: a jupyter notebook showcasing how one might use these functions in a python script or notebook
 
-- example_data.csv: data file for the purposes of demonstration
+- example_data(_updated).csv: data file for the purposes of demonstration
 
 
 ## Usage:

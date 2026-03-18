@@ -1,17 +1,11 @@
 # CarbonFixationModel1D
-Functionality for data analysis and generation of plots published in the article:
-
-Title: Mapping Carbon Fixation to Two Effective Parameters: a framwork towards data-informed model simplifications 
-
-Journal: ...
-
-DOI: ...
+Title: Mapping Carbon Fixation to Two Effective Parameters: a Framework towards data-informed Species and Model Comparison 
 
 Authors: A. Stillits, T.E. Knudsen, A. Trusina
 
 Abstract: 
 
-Identifying the steps limiting net $CO_2$ assimilation rate in plant leaves, is essential for improving crop yield and resilience. However, disentangling the combined effects of multiple traits remains a major challenge. Biophysical models can resolve how multiple traits combine to control the rate-limiting steps, but there is no systematic way to identify the appropriate level of spatial and mechanistic resolution - ranging from simple resistance models to detailed anatomical simulations. Here, we propose that the necessary level of model resolution is species-specific. We apply a minimal reaction-diffusion model and reduce $CO_2$ fixation in leaves to two key parameters. These parameters comprise a compact phase space in which three rate-limiting regimes emerge naturally: stomatal uptake, intercellular diffusion, and subcellular processes. Mapping diverse plant species into this phase space reveals dominant co-limitations by stomatal and subcellular processes. The same parameter space provides quantitative criteria for model selection. Our results suggest that a simple model parameterized with bulk leaf properties will suffice to relate assimilation rate and leaf physiology for the vast majority of plants. However, a precise estimation of bulk properties from 3D anatomical data and models will be crucial. This framework offers a scalable path for interpreting complex trait data and guiding model selection.
+To improve crop yield and resilience it is essential to identify the steps limiting $CO_2$ assimilation rate in plant leaves by disentangling the combined effects of multiple traits. Individual trait effects can be resolved by mechanistic models of the underlying diffusion, biochemistry and geometry. Yet the widely used simple serial resistance models overlook tissue geometry, and detailed anatomical models are computationally heavy and rely on parameters that are difficult to measure. Here, we propose a framework, showing that the necessary level of model resolution can be species-specific and spans the spectrum from simple to complex models. We apply a minimal reaction-diffusion model and reduce $CO_2$ fixation in leaves to two key parameters. These parameters comprise a compact phase space in which three rate-limiting regimes emerge naturally: stomatal uptake, intercellular diffusion, and intracellular processes. Mapping diverse plant species into this phase space reveals: (1) dominant co-limitations by stomatal and intracellular processes, (2) an equal partition between species that require spatially resolved leaf-scale models and species where intracellular models suffice. Taken together, we present a scalable path for interpreting complex trait data and bridging between models.
 
 FILE STRUCTURE
 
@@ -42,8 +36,6 @@ FILE STRUCTURE
             - Data from Momayyezi et al. 2022 where we have estimated $(\tau,\gamma)$ for drought conditions
         - Momayyezi2022_watered.csv
             - Data from Momayyezi et al. 2022 where we have estimated $(\tau,\gamma)$ for well-watered conditions
-        - sensitivities.txt
-            - Data reflecting the sensitivity ($\eta(\tau,\gamma)$) heatmap in e.g. figure 3C
     - scripts
         - datareader_Knauer2022.ipynb
             - Jupyter notebook for analysis of data provided by Knauer et al. 2022.
@@ -56,9 +48,9 @@ FILE STRUCTURE
             - Jupyter notebook exploring the differences in $g_m^*$ definitions in a serial resistance model (0D) versus a continuous parallel resistance model (1D)
 - figures (scripts and .svg files used to generate the presented plots. NB: later editing in Adobe Illustrator did follow)
     - scripts
-        - Jupyter notebooks for generating blueprints for figures 2A, 2B, 2D, 2E, 2F, 3A, 3B, 3C, and supplementary S1-S7
+        - Jupyter notebooks for generating blueprints for figures 2, 3, 4, and supplementary figures S1-S7
     - vectorgraphics
-        - .svg and .png files of the blueprints used for the presented figures. Later refinements has followed in Adobe Illustrator in published versions
+        - .svg and .png files of the blueprints used for the presented figures. Later refinements has followed in published versions
 - modules (python files containing often used functionality)
     - estimator.py
         - module containing function for estimation and error propagation of quantities: $C_i, g_m^*, \tau, \gamma$. 
@@ -110,7 +102,6 @@ FILE STRUCTURE
                 - helper module for often used plotting utilities
             - profiles.py
                 - helper module for typical diffusivity $D$, reactivity $K$ and oscillatory profiles in time and space.
-    - figures (plots summarizing supplementary exploration results)
     - notebooks (Must be run with supplementary/ as the working directory)
         - generation of summarizing supplementary plots and interactive tools
     - shell scripts (scripts for saturating the supplementary simulation database)
@@ -131,6 +122,8 @@ FILE STRUCTURE
         - pandas
         - matplotlib
         - tqdm (optional nicety)
+- python_module
+    - Functionality for calculating $(\tau,\gamma)$ and visualizing custom data in the context of presented figures
 
 CONTACT
 
